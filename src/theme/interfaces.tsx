@@ -2,6 +2,8 @@ export interface IColors {
     purple: string;
     white: string;
     grey: string;
+    blue: string;
+    green: string;
 }
   
 export interface IFontSizes {
