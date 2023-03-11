@@ -1,11 +1,25 @@
-import { useState } from 'react'
+import { RecoilRoot } from 'recoil';
+import MainRouter from './router';
+
+import { createGlobalStyle } from 'styled-components';
+import Theme from './theme';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+	margin: auto;
+	font-family: 'Poppins', sans-serif;
+	background-color: black;
+  }
+`
 
 function App() {
-	const [count, setCount] = useState(0)
-
 	return (
-		<div className="App">
-		</div>
+		<RecoilRoot>
+			<Theme>
+				<GlobalStyle />
+				<MainRouter />
+			</Theme>
+		</RecoilRoot>
 	)
 }
 
