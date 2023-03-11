@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 import { useRecoilState } from 'recoil';
 import styled from 'styled-components';
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";

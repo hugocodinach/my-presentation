@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import styled from 'styled-components';
 
 import { IColors } from '../../theme/interfaces';
+import hexToRgb from '../../utils/color';
 
 type IconButtonProps = {
     children: ReactNode;
@@ -19,7 +20,7 @@ const IconContainer = styled.div<IconButtonProps>`
     background-color: ${({ color, theme: { colors } }) => colors[color || 'blue']};
     justify-content: center;
     align-items: center;
-    box-shadow: rgb(44, 115, 210) 0px 20px 30px -10px;
+    box-shadow: ${({ color, theme: { colors } }) => hexToRgb(colors[color || 'blue'])} 0px 20px 30px -10px;
     &:hover {
         cursor: pointer;
     }

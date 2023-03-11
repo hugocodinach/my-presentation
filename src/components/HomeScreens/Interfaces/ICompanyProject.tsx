@@ -1,7 +1,4 @@
-interface ITechnology {
-    logo: string;
-    name: string;
-}
+import ITechnology from "./ITechnology";
 
 interface ICompanyProject {
     name: string;

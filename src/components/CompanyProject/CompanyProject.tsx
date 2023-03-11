@@ -1,13 +1,15 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
-import ICompanyProject from '../HomeScreens/ICompanyProject';
+import hexToRgb from '../../utils/color';
+import ICompanyProject from '../HomeScreens/Interfaces/ICompanyProject';
+import Technology from '../Technology/Technology';
 import Text from '../Text/Text';
 
 const CompanyProjectContainer = styled.div`
     width: 1000px;
     height: 600px;
     border: 1px solid ${({ theme: { colors } }) => colors.blue};
-    box-shadow: rgb(44, 115, 210) 0px 20px 30px -10px;
+    box-shadow: ${({ theme: { colors } }) => hexToRgb(colors.blue)} 0px 20px 30px -10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -52,12 +54,6 @@ const WrapRow = styled.div`
     gap: 5rem;
 `;
 
-const TechnologyContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
 type CompanyProjectProps = {
     project: ICompanyProject;
 };
@@ -68,7 +64,6 @@ const CompanyProject = ({
     const { name, company, logo, description, technologies } = project;
 
     const titleStyle = useMemo(() => ({ marginBottom: 10 }), []);
-    const technologyTitleStyle = useMemo(() => ({ marginTop: 10 }), []);
 
     return (
         <CompanyProjectContainer>
@@ -92,13 +87,8 @@ const CompanyProject = ({
             <Section>
                 <Text style={titleStyle} color='grey' isUpperCase>Technologies</Text>
                 <WrapRow>
-                    {technologies.map((techology, key) => (
-                        <TechnologyContainer key={key}>
-                            <ImageContainer title={techology.name}>
-                                <Logo src={techology.logo} alt='techology logo' />
-                            </ImageContainer>
-                            <Text style={technologyTitleStyle}>{techology.name}</Text>
-                        </TechnologyContainer>
+                    {technologies.map((technology, key) => (
+                        <Technology technology={technology} key={key} />
                     ))}
                 </WrapRow>
             </Section>

@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import styled from 'styled-components';
 
 import Profile from '../../assets/profile.jpg';
+import hexToRgb from '../../utils/color';
 import Text from '../Text/Text';
 
 const SheetContainer = styled.div`
@@ -23,7 +24,7 @@ const ImageContainer = styled.div`
 const ProfileImage = styled.img`
     width: 100%;
     object-fit: contain;
-    box-shadow: rgb(44, 115, 210) 0px 20px 30px -10px;
+    box-shadow: ${({ theme: { colors } }) => hexToRgb(colors.blue)} 0px 20px 30px -10px;
 `;
 
 const InformationsContainer = styled.div`
@@ -90,6 +91,12 @@ const Sheet = () => {
                         <Text fontSize='body' isBold>Temps passé en entreprise : </Text>
                     </CategoryTitleContainer>
                     <Text fontSize='body'> Plus de 3 ans</Text>
+                </Row>
+                <Row>
+                    <CategoryTitleContainer>
+                        <Text fontSize='body' isBold>Domicile : </Text>
+                    </CategoryTitleContainer>
+                    <Text fontSize='body'> Port marianne</Text>
                 </Row>
             </InformationsContainer>
         </SheetContainer>

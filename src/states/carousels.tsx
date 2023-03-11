@@ -1,5 +1,5 @@
 
-import { atom, selector } from 'recoil';
+import { atom } from 'recoil';
 
 export const activeIndexState = atom<number>({
   key: 'activeIndexState',

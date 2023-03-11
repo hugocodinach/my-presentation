@@ -21,7 +21,6 @@ const PaginatorButton = styled.div<PaginatorButtonProps>`
     border: 1px solid ${({ theme: { colors } }) => colors.grey};
     background-color: ${({ isActive, theme: { colors } }) => isActive ? colors.blue : 'transparent'};
     cursor: pointer;
-    box-shadow: ${({ isActive }) => isActive ? 'rgba(44, 115, 210, 0.25) 0px 54px 55px, rgba(44, 115, 210, 0.12) 0px -12px 30px, rgba(44, 115, 210, 0.12) 0px 4px 6px, rgba(44, 115, 210, 0.17) 0px 12px 13px, rgba(44, 115, 210, 0.09) 0px -3px 5px' : 'unset'};
 `;
 
 type PaginatorProps = {

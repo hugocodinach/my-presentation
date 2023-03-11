@@ -4,7 +4,7 @@ import Carousel from '../Carousel/Carousel';
 import CompanyProject from '../CompanyProject/CompanyProject';
 import Text from '../Text/Text';
 
-import ICompanyProject from './ICompanyProject';
+import ICompanyProject from './Interfaces/ICompanyProject';
 
 const CompaniesContainer = styled.div`
     display: flex;
