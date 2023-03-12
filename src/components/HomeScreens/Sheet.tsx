@@ -5,12 +5,15 @@ import Profile from '../../assets/profile.jpg';
 import hexToRgb from '../../utils/color';
 import Text from '../Text/Text';
 
+import BackgroundImage from '../../assets/background1.png';
+
 const SheetContainer = styled.div`
   padding: 0px 100px 0px 100px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 200px;
+  position: relative;
 `;
 
 const ImageContainer = styled.div`
@@ -42,6 +45,22 @@ const Row = styled.div`
     margin-bottom: 10px;
 `;
 
+const BGContainer = styled.div`
+    position: absolute;
+    width: 100vw;
+    top: 20vh;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+`;
+
+const Background = styled.img`
+    width: 100%;
+    object-fit: contain;
+`;
+
 const CategoryTitleContainer = styled.div`
     width: 300px;
 `;
@@ -51,6 +70,9 @@ const Sheet = () => {
 
     return (
         <SheetContainer>
+            <BGContainer>
+                <Background src={BackgroundImage} alt='background' />
+            </BGContainer>
             <ImageContainer>
                 <ProfileImage src={Profile} alt='profile picture' />
             </ImageContainer>

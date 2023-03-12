@@ -15,6 +15,7 @@ const CompanyProjectContainer = styled.div`
     flex-direction: column;
     padding: 50px;
     white-space: normal;
+    backdrop-filter: blur(15px);
 `;
 
 const Header = styled.div`
