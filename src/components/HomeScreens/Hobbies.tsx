@@ -30,7 +30,7 @@ const Hobbies = () => {
         {
             title: 'Cinéma',
             logo: CinemaImg,
-            listTitle: 'Films préférés',
+            listTitle: 'Films préférés 🎬',
             listItems: [
                 'Drive',
                 'Le parrain 1',
@@ -40,7 +40,7 @@ const Hobbies = () => {
         {
             title: 'Musique',
             logo: MusicImg,
-            listTitle: 'Artistes phares',
+            listTitle: 'Artistes phares 🤘',
             listItems: [
                 'Hugo TSR',
                 'Laylow',
@@ -50,7 +50,7 @@ const Hobbies = () => {
         {
             title: 'Dessin',
             logo: DrawImg,
-            listTitle: 'Outils utilisés',
+            listTitle: 'Outils utilisés 🎨',
             listItems: [
                 'Feutre à alcool',
                 'Procreate',
