@@ -82,9 +82,6 @@ const Cover = () => {
             <StarContainer>
                 <Star src={StarImage} alt='star' />
             </StarContainer>
-            <BottomStarContainer>
-                <Star src={StarImage} alt='star' />
-            </BottomStarContainer>
             <CoverContainer>
                 <TitlesContainer>
                     <Text color='purple' fontSize='subtitle' isUpperCase isBold>
