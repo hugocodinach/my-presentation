@@ -12,7 +12,7 @@ const CompaniesContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-    padding: 0px 100px 0px 100px;
+    padding: 0px 6.25rem 0px 6.25rem;
     margin-bottom: 50px;
 `;
 

@@ -6,8 +6,8 @@ import Text from '../Text/Text';
 
 const ImageContainer = styled.div`
     display: flex;
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     justify-content: center;
     align-items: center;
 `;

@@ -30,7 +30,7 @@ const ItemContainer = styled.div`
 
 const LeftIconContainer = styled.div`
     position: absolute;
-    left: 100px;
+    left: 6.25rem;
 `;
 
 const LeftIcon = styled(MdChevronLeft)`
@@ -40,7 +40,7 @@ const LeftIcon = styled(MdChevronLeft)`
 
 const RightIconContainer = styled.div`
     position: absolute;
-    right: 100px;
+    right: 6.25rem;
 `;
 
 const RightIcon = styled(MdChevronRight)`

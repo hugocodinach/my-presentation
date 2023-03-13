@@ -6,14 +6,21 @@ import hexToRgb from '../../utils/color';
 import Text from '../Text/Text';
 
 import BackgroundImage from '../../assets/background1.png';
+import devices from '../../utils/devices';
+import sizes from '../../utils/sizes';
 
 const SheetContainer = styled.div`
-  padding: 0px 100px 0px 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 200px;
-  position: relative;
+    padding: 0px 6.25rem 0px 6.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 200px;
+    position: relative;
+
+	@media (max-width: ${sizes.tablet}px) {
+        flex-direction: column;
+        gap: 5vh;
+	}
 `;
 
 const ImageContainer = styled.div`
@@ -22,6 +29,12 @@ const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${sizes.tablet}px) {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+	}
 `;
 
 const ProfileImage = styled.img`
@@ -35,7 +48,6 @@ const InformationsContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding-left: 15%;
-    padding-top: 30px;
 `;
 
 const Row = styled.div`
@@ -62,7 +74,7 @@ const Background = styled.img`
 `;
 
 const CategoryTitleContainer = styled.div`
-    width: 300px;
+    width: 19rem;
 `;
 
 const Sheet = () => {

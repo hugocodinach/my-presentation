@@ -1,9 +1,13 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
+
 import Text from '../Text/Text';
+
+import useWindowDimensions from '../../utils/useWindowDimensions';
 
 import Illustration from '../../assets/HomePicture.png';
 import StarImage from '../../assets/star1.png';
+import sizes from '../../utils/sizes';
 
 const Container = styled.div`
     width: 100vw;
@@ -12,7 +16,7 @@ const Container = styled.div`
 `;
 
 const CoverContainer = styled.div`
-    padding: 0px 100px 0px 100px;
+    padding: 0px 6.25rem 0px 6.25rem;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +24,7 @@ const CoverContainer = styled.div`
 `;
 
 const TitlesContainer = styled.div`
-    width: 700px;
+    width: 40rem;
     display: flex;
     flex-direction: column;
 `;
@@ -53,18 +57,6 @@ const StarContainer = styled.div`
     z-index: -1;
 `;
 
-const BottomStarContainer = styled.div`
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    top: 90vh;
-    right: -10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-`;
-
 const Star = styled.img`
     width: 100%;
     height: 100%;
@@ -72,13 +64,18 @@ const Star = styled.img`
 `;
 
 const Cover = () => {
+    const { width } = useWindowDimensions();
+
     const titleStyle = useMemo(() => ({ margin: '40px 0px 40px 0px', lineHeight: 1.2 }), []);
+    const isImageVisible = useMemo(() => width > sizes.mobileL, [width]);
 
     return (
         <Container>
-            <ImageContainer>
-                <Image src={Illustration} alt='illustration' />
-            </ImageContainer>
+            {isImageVisible &&
+                <ImageContainer>
+                    <Image src={Illustration} alt='illustration' />
+                </ImageContainer>
+            }
             <StarContainer>
                 <Star src={StarImage} alt='star' />
             </StarContainer>

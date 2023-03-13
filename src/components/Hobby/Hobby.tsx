@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import { atom, useRecoilState } from 'recoil';
 
 import { IColors } from '../../theme/interfaces';
 import hexToRgb from '../../utils/color';
 import Text from '../Text/Text';
 import IHobby from './Interfaces/IHobby';
-import { getIsHoverState } from '../../states/hobby';
 
 type HobbyCardContentProps = {
     color: IColors[keyof IColors];

@@ -14,8 +14,8 @@ const HobbiesContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
 `;
 
 const CardsContainer = styled.div`

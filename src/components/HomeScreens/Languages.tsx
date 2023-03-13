@@ -5,7 +5,7 @@ import Text from '../Text/Text';
 import ITechnology from './Interfaces/ITechnology';
 
 const LanguagesContainer = styled.div`
-    padding: 0px 100px 0px 100px;
+    padding: 0px 6.25rem 0px 6.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
