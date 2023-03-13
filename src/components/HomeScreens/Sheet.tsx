@@ -5,8 +5,6 @@ import Profile from '../../assets/profile.jpg';
 import hexToRgb from '../../utils/color';
 import Text from '../Text/Text';
 
-import BackgroundImage from '../../assets/background1.png';
-import devices from '../../utils/devices';
 import sizes from '../../utils/sizes';
 
 const SheetContainer = styled.div`
@@ -20,6 +18,7 @@ const SheetContainer = styled.div`
 	@media (max-width: ${sizes.tablet}px) {
         flex-direction: column;
         gap: 5vh;
+        padding: 0px;
 	}
 `;
 
@@ -57,34 +56,15 @@ const Row = styled.div`
     margin-bottom: 10px;
 `;
 
-const BGContainer = styled.div`
-    position: absolute;
-    width: 100vw;
-    top: 20vh;
-    left: 0rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-`;
-
-const Background = styled.img`
-    width: 100%;
-    object-fit: contain;
-`;
-
 const CategoryTitleContainer = styled.div`
     width: 19rem;
 `;
 
 const Sheet = () => {
-    const titleStyle = useMemo(() => ({ marginBottom: 50 }), []);
+    const titleStyle = useMemo(() => ({ marginBottom: '3rem' }), []);
 
     return (
         <SheetContainer>
-            <BGContainer>
-                <Background src={BackgroundImage} alt='background' />
-            </BGContainer>
             <ImageContainer>
                 <ProfileImage src={Profile} alt='profile picture' />
             </ImageContainer>

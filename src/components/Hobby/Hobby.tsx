@@ -1,7 +1,10 @@
+import { useMemo } from 'react';
 import styled from 'styled-components';
 
 import { IColors } from '../../theme/interfaces';
 import hexToRgb from '../../utils/color';
+import sizes from '../../utils/sizes';
+import useWindowDimensions from '../../utils/useWindowDimensions';
 import Text from '../Text/Text';
 import IHobby from './Interfaces/IHobby';
 
@@ -21,6 +24,10 @@ const HobbyCard = styled.div`
     &:hover {
         transform: translateY(-2%);
     }
+
+    @media (max-width: ${sizes.tablet}px) {
+        width: 30rem;
+	}
 `;
 
 const HobbyCardContent = styled.div<HobbyCardContentProps>`
@@ -77,6 +84,10 @@ const Hobby = ({
     hobby,
     color
 }: HobbyProps) => {
+    const { width } = useWindowDimensions();
+
+    const isSmall = useMemo(() => width <= sizes.tablet, [width]);
+
     return (
         <HobbyCard>
             <ImageContainer>
@@ -85,12 +96,12 @@ const Hobby = ({
             <HobbyCardContent color={color}>
                 <HobbyTextContainer>
                     <HobbyTitle>
-                        <Text fontSize='subtitle' color={color} isUpperCase isBold>{hobby.title}</Text>
+                        <Text fontSize={isSmall ? 'title' : 'subtitle'} color={color} isUpperCase isBold>{hobby.title}</Text>
                     </HobbyTitle>
                     <HobbyBody>
-                        <Text color='grey'>{hobby.listTitle} :</Text>
+                        <Text color='grey' fontSize={isSmall ? 'subtitle' : 'body'}>{hobby.listTitle} :</Text>
                         {hobby.listItems.map((item, key) => (
-                            <Text key={key} color='grey'>• {item}</Text>
+                            <Text key={key} fontSize={isSmall ? 'subtitle' : 'body'} color='grey'>• {item}</Text>
                         ))}
                     </HobbyBody>
                 </HobbyTextContainer>

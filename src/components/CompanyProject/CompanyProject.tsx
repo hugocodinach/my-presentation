@@ -1,21 +1,27 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
 import hexToRgb from '../../utils/color';
+import sizes from '../../utils/sizes';
 import ICompanyProject from '../HomeScreens/Interfaces/ICompanyProject';
 import Technology from '../Technology/Technology';
 import Text from '../Text/Text';
 
 const CompanyProjectContainer = styled.div`
-    width: 1000px;
-    height: 600px;
+    width: 62.5rem;
+    height: 37.5rem;
     border: 1px solid ${({ theme: { colors } }) => colors.blue};
     box-shadow: ${({ theme: { colors } }) => hexToRgb(colors.blue)} 0px 20px 30px -10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 3rem;
     white-space: normal;
     backdrop-filter: blur(15px);
+    max-width: 80%;
+
+    @media (max-width: ${sizes.tablet}px) {
+        height: 40rem;
+	}
 `;
 
 const Header = styled.div`
@@ -31,7 +37,7 @@ const Column = styled.div`
 `;
 
 const Section = styled(Column)`
-    margin-top: 50px;
+    margin-top: 3rem;
 `;
 
 const ImageContainer = styled.div`
@@ -53,6 +59,10 @@ const WrapRow = styled.div`
     flex-wrap: wrap;
     width: 100%;
     gap: 5rem;
+
+    @media (max-width: ${sizes.tablet}px) {
+        gap: 1rem;
+	}
 `;
 
 type CompanyProjectProps = {

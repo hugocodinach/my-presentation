@@ -6,6 +6,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { activeIndexState } from '../../states';
 import IconButton from '../Button/IconButton';
 import Paginator from './Paginator';
+import sizes from '../../utils/sizes';
 
 const CarouselContainer = styled.div`
     overflow: hidden;
@@ -28,24 +29,29 @@ const ItemContainer = styled.div`
     width: 100%;
 `;
 
-const LeftIconContainer = styled.div`
-    position: absolute;
-    left: 6.25rem;
-`;
-
 const LeftIcon = styled(MdChevronLeft)`
     font-size: ${({ theme: { fontSizes } }) => fontSizes.subtitle};
     color ${({ theme: { colors } }) => colors.white};
 `
 
-const RightIconContainer = styled.div`
-    position: absolute;
-    right: 6.25rem;
-`;
-
 const RightIcon = styled(MdChevronRight)`
     font-size: ${({ theme: { fontSizes } }) => fontSizes.subtitle};
     color ${({ theme: { colors } }) => colors.white};
+`;
+
+const ButtonsContainer = styled.div`
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+
+    @media (max-width: ${sizes.tablet}px) {
+        position: unset;
+        margin-top: 10px;
+	}
 `;
 
 type CarouselProps = {
@@ -99,16 +105,14 @@ const Carousel = ({
                         );
                     })}
                 </InnerContainer>
-                <LeftIconContainer>
+                <ButtonsContainer>
                     <IconButton onClick={handlePrevious}>
                         <LeftIcon />
                     </IconButton>
-                </LeftIconContainer>
-                <RightIconContainer>
                     <IconButton onClick={handleNext}>
                         <RightIcon />
                     </IconButton>
-                </RightIconContainer>
+                </ButtonsContainer>
             </CarouselContainer>
             <Paginator items={items} activeIndex={activeIndex} onClick={handleClick} />
         </>

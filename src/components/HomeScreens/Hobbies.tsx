@@ -8,6 +8,7 @@ import Text from '../Text/Text';
 import CinemaImg from '../../assets/cinema.png';
 import MusicImg from '../../assets/music.png';
 import DrawImg from '../../assets/draw.png';
+import sizes from '../../utils/sizes';
 
 const HobbiesContainer = styled.div`
     width: 100%;
@@ -22,6 +23,10 @@ const CardsContainer = styled.div`
     display: flex;
     flex-direction: row;
     gap: 4rem;
+
+    @media (max-width: ${sizes.tablet}px) {
+        flex-direction: column;
+	}
 `;
 
 const Hobbies = () => {

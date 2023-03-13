@@ -104,7 +104,7 @@ const Languages = () => {
                     <Technology technology={technology} key={key} />
                 ))}
             </TechnologiesContainer>
-            <Text fontSize='title' isBold isUpperCase>Technologies où je débute</Text>
+            <Text style={{ marginTop: 50 }} fontSize='title' isBold isUpperCase>Technologies où je débute</Text>
             <TechnologiesContainer>
                 {secondaryTechnologies.map((technology, key) => (
                     <Technology technology={technology} key={key} />

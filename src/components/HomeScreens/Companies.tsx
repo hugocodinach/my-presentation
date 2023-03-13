@@ -4,16 +4,36 @@ import Carousel from '../Carousel/Carousel';
 import CompanyProject from '../CompanyProject/CompanyProject';
 import Text from '../Text/Text';
 
+import BackgroundImage from '../../assets/background1.png';
+
 import ICompanyProject from './Interfaces/ICompanyProject';
 
 const CompaniesContainer = styled.div`
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 100vw;
 `;
 
 const TitleContainer = styled.div`
     padding: 0px 6.25rem 0px 6.25rem;
     margin-bottom: 50px;
+`;
+
+const BGContainer = styled.div`
+    position: absolute;
+    width: 100vw;
+    top: 0vh;
+    left: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+`;
+
+const Background = styled.img`
+    width: 100%;
+    object-fit: contain;
 `;
 
 const Companies = () => {
@@ -191,6 +211,9 @@ const Companies = () => {
 
     return (
         <CompaniesContainer>
+            <BGContainer>
+                <Background src={BackgroundImage} alt='background' />
+            </BGContainer>
             <TitleContainer>
                 <Text fontSize='title' isBold isUpperCase>Projets effectués</Text>
             </TitleContainer>

@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import styled from 'styled-components';
+import sizes from '../../utils/sizes';
 
 import ITechnology from '../HomeScreens/Interfaces/ITechnology';
 import Text from '../Text/Text';
@@ -10,6 +11,11 @@ const ImageContainer = styled.div`
     height: 6.25rem;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: ${sizes.tablet}px) {
+        width: 5.5rem;
+        height: 5.5rem;
+	}
 `;
 
 const Logo = styled.img`

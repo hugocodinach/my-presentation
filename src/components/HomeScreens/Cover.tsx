@@ -66,7 +66,7 @@ const Star = styled.img`
 const Cover = () => {
     const { width } = useWindowDimensions();
 
-    const titleStyle = useMemo(() => ({ margin: '40px 0px 40px 0px', lineHeight: 1.2 }), []);
+    const titleStyle = useMemo(() => ({ margin: '2.5rem 0px 2.5rem 0px', lineHeight: 1.2 }), []);
     const isImageVisible = useMemo(() => width > sizes.mobileL, [width]);
 
     return (
