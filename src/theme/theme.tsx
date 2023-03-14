@@ -6,7 +6,7 @@ const theme: ITheme = {
       "white": "#FFFFFF",
       "grey": "#778ca3",
       "blue": "#2C73D2",
-      "green": "#008F7A"
+      "green": "#008F7A",
     },
     "fontSizes": {
       "subBody": "0.9rem",

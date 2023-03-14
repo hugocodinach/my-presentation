@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Companies from '../components/HomeScreens/Companies';
+import Contact from '../components/HomeScreens/Contact';
 
 import Cover from '../components/HomeScreens/Cover';
 import Hobbies from '../components/HomeScreens/Hobbies';
@@ -20,6 +21,7 @@ const Home = () => {
             <Companies />
             <Languages />
             <Hobbies />
+            <Contact />
         </HomeContainer>
     );
 };

@@ -43,21 +43,28 @@ const ProfileImage = styled.img`
 `;
 
 const InformationsContainer = styled.div`
-    height: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 15%;
+    margin-left: 5%;
+    width: 45%;
+
+    @media (max-width: ${sizes.tablet}px) {
+        width: 80%;
+        margin-left: 10%;
+	}
 `;
 
-const Row = styled.div`
+const WrapRow = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 4rem;
 `;
 
-const CategoryTitleContainer = styled.div`
-    width: 19rem;
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 const Sheet = () => {
@@ -69,49 +76,37 @@ const Sheet = () => {
                 <ProfileImage src={Profile} alt='profile picture' />
             </ImageContainer>
             <InformationsContainer>
-                <Text fontSize='subtitle' isUpperCase isBold color='purple' style={titleStyle}>Carte du pilote</Text>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Prénom : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> Hugo</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Nom : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> CODINACH</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Âge : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> 23 ans</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Langues parlées : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> Français / Anglais</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Diplôme : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> Vient de finir ses études à EPITECH (Bac +5)</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Temps passé en entreprise : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> Plus de 3 ans</Text>
-                </Row>
-                <Row>
-                    <CategoryTitleContainer>
-                        <Text fontSize='body' isBold>Domicile : </Text>
-                    </CategoryTitleContainer>
-                    <Text fontSize='body'> Port marianne</Text>
-                </Row>
+                <Text fontSize='title' isUpperCase isBold style={titleStyle}>Carte du pilote</Text>
+                <WrapRow>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Prénom : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> Hugo</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Nom : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> CODINACH</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Âge : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> 23 ans</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Langues parlées : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> Français / Anglais</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Diplôme : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> Vient de finir ses études à EPITECH (Bac +5)</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Temps passé en entreprise : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> Plus de 3 ans</Text>
+                    </Column>
+                    <Column>
+                        <Text fontSize='body' isUpperCase>Domicile : </Text>
+                        <Text fontSize='subtitle' color='purple' isBold> Port marianne</Text>
+                    </Column>
+                </WrapRow>
             </InformationsContainer>
         </SheetContainer>
     );
