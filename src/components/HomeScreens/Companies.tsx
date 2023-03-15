@@ -42,7 +42,7 @@ const Companies = () => {
             name: 'Scraping bot',
             company: 'BSWeb',
             logo: 'https://pricecomparator.pro/wp-content/uploads/2019/05/Logo-132px.png',
-            description: `Développement d'un script js permettant de générer un script js de scraping pour un site donné.\nQuand la génération ne fonctionnait pas, je réalisais le script de scraping à la main. Le but était de récupérer différentes informations d'un article mis en vente sur un site d'e-commerce.\nLes résultats étaient ensuite mis à disposition du client pour qu'il puisse réguler ses propres prix en fonction de ceux du marché.`,
+            description: `Développement d'un script js permettant de générer un script de scraping pour un site donné.\nQuand la génération ne fonctionnait pas, je réalisais le script de scraping à la main. Le but était de récupérer différentes informations d'un article mis en vente sur un site d'e-commerce.\nLes résultats étaient ensuite mis à disposition du client pour qu'il puisse réguler ses propres prix en fonction de ceux du marché.`,
             technologies: [
                 {
                     logo: 'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png',
@@ -54,7 +54,7 @@ const Companies = () => {
             name: 'Backoffice',
             company: 'BSWeb',
             logo: 'https://pricecomparator.pro/wp-content/uploads/2019/05/Logo-132px.png',
-            description: `Développement d'un backoffice permettant de gérer les différents clients ainsi que les résultats récupérés par les scripts de scraping.\nCet outil nous permmetait aussi de repérer et de mettre à jour les scripts obsolètes.`,
+            description: `Développement d'un backoffice permettant de gérer les différents clients ainsi que les résultats récupérés par les scripts de scraping.\nCet outil nous permettait aussi de repérer et de mettre à jour les scripts obsolètes.`,
             technologies: [
                 {
                     logo: 'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png',
@@ -78,7 +78,7 @@ const Companies = () => {
             name: 'Bonjour Henry',
             company: 'Barbablanka',
             logo: 'https://www.barbablanka.com/_next/image?url=%2Fimages%2Fbarbablanka-logo-small.png&w=3840&q=75',
-            description: `Réalisation en autonomie de la v2 de l'application "Bonjour Henry".\nCette dernière, destinée aux personnes âgées, permet de centraliser et d'afficher tous le messages envoyés via messenger ou sms sur l'application. Une fois ces derniers récupérés, ils seront lu à haute voix par l'application, comme pour un répondeur.\nJ'ai aussi dévéloppé un système de visio pour permettre à la personne âgée d'appeler ses proches sur messenger sans quitter l'application.`,
+            description: `Réalisation en autonomie de la v2 de l'application "Bonjour Henry".\nCette dernière, destinée aux personnes âgées, permet de centraliser et d'afficher tous les messages envoyés via messenger ou sms sur l'application. Une fois ces derniers récupérés, ils seront lu à haute voix par l'application, comme pour un répondeur.\nJ'ai aussi dévéloppé un système de visio pour permettre à la personne âgée d'appeler ses proches sur messenger sans quitter l'application "Bonjour Henry".`,
             technologies: [
                 {
                     logo: 'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png',
@@ -106,7 +106,7 @@ const Companies = () => {
             name: 'ViaTransit',
             company: 'ViaDigital',
             logo: 'https://static.data.gouv.fr/images/38/55bf16d4c34040b47ddfdaa8bf4f27.png',
-            description: `Réalisation de l'onglet magasin de l'application, et implémentation d'un système d'achat de titre de transport. J'ai aussi réalisé un onglet permettant de réserver des trajets de transport à la demande.\nPour finir, j'ai entretenu l'application pendant tout mon séjour chez viaDigital (Rework visuels de l'application, optimisation et amélioration de la scalabilité du code).`,
+            description: `Réalisation de l'onglet magasin de l'application, et implémentation d'un système d'achat de titre de transport. J'ai aussi réalisé un onglet permettant de réserver des trajets de transport à la demande.\nPour finir, j'ai entretenu l'application pendant tout mon séjour chez viaDigital (Rework visuel de l'application, optimisation et amélioration de la scalabilité du code).`,
             technologies: [
                 {
                     logo: 'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png',
