@@ -1,7 +1,9 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 import styled from 'styled-components';
 
-import MusicImg from '../../assets/music.png';
+import PhoneImg from '../../assets/phone.png';
+import GithubImg from '../../assets/github.png';
+import MailImg from '../../assets/mail.png';
 import Text from '../Text/Text';
 
 const Container = styled.div`
@@ -60,7 +62,7 @@ const Contact = () => {
             <ContactContainer>
                 <Column>
                     <ImageContainer>
-                        <Logo src={MusicImg} alt={'test'} />
+                        <Logo src={PhoneImg} alt={'test'} />
                     </ImageContainer>
                     <TextContainer>
                         <Text>
@@ -70,21 +72,21 @@ const Contact = () => {
                 </Column>
                 <Column>
                     <ImageContainer>
-                        <Logo src={MusicImg} alt={'test'} />
+                        <Logo src={GithubImg} alt={'test'} />
                     </ImageContainer>
                     <TextLinkContainer onClick={handleOpenGH}>
                         <Text>
-                            Vous pouvez découvrir le code de ce site en cliquant <Text color='blue' isBold>ici</Text>
+                            Vous pouvez découvrir le code de ce site en cliquant <Text color='purple' isBold>ici</Text>
                         </Text>
                     </TextLinkContainer>
                 </Column>
                 <Column>
                     <ImageContainer>
-                        <Logo src={MusicImg} alt={'test'} />
+                        <Logo src={MailImg} alt={'test'} />
                     </ImageContainer>
                     <TextContainer>
                         <Text>
-                            Vous pouvez m'envoyer un mail à <Text color='blue' isBold>hugo.codinach.pro@gmail.com</Text>
+                            Vous pouvez m'envoyer un mail à <Text color='green' isBold>hugo.codinach.pro@gmail.com</Text>
                         </Text>
                     </TextContainer>
                 </Column>
