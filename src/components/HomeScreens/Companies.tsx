@@ -129,7 +129,7 @@ const Companies = () => {
                     name: 'firebase'
                 },
                 {
-                    logo: 'https://scontent-mrs2-2.xx.fbcdn.net/v/t39.30808-6/298252203_430701119094127_303775875313850015_n.png?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=LQrtYjL4mhoAX-5G6z5&_nc_ht=scontent-mrs2-2.xx&oh=00_AfAYyme5wUSEvic19jwQTh9Ab16MwcvLbb2HNtTY0r2Z7Q&oe=64129146',
+                    logo: 'https://ssl.sitew.org/images/blog/articles/api/payzen.png',
                     name: 'payzen'
                 }
             ]
@@ -192,7 +192,7 @@ const Companies = () => {
                     name: 'typescript'
                 },
                 {
-                    logo: 'https://lh3.googleusercontent.com/Bn-9LhsZ1P0z-ob_4pwvTF3aucymAzk6uqG7QIPkM7oo_ADkF1TJu_zJdxJswpkfU3Y',
+                    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBevo9J5zruFSMoAnDHCfW81tT_6XSCpSLMoeBSg4oG6S0JRwb5cxg7UV08webIN9LAFM&usqp=CAU',
                     name: 'expo'
                 },
                 {
